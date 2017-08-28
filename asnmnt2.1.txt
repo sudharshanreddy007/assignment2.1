@@ -1,0 +1,50 @@
+Java Architecture
+    
+  Compilation and interpretation in java:
+     Java combines both the approaches of compilation and interpretation.first,java compiler compiles the sourcecode into bytecode.
+     At the runtime,JVM interprets this bytecode and generates machine code which will be directly executed by the machine in which java program runs.
+     so,java is both compiled and interpreted language.
+                                  
+
+                       soure code 
+                            |
+                    java compiler
+                            |
+                      byte code----JVM---OS
+
+   JVM:
+     JVM is a component which provides an environment for running java programs.
+     JVM interprets the bytecode into machine code which will be executed the machine in which the java programs runs.
+
+   Java is platform independent:
+     Platform independence is one of the main advantage of java.
+     java is portable because the same java program can be executed in multiple platforms without making any changes in the sourcecode.
+     write once and run anywhere.java code is compiled by the java compiler and generates the bytecode.
+     this bytecode will be stored in classfiles.JVM is unique for each platform though JVM is unique for each platform,this makes java platform independent.
+
+   JRE:
+     Java runtime environment contains JVM,class libraries and other components.
+     jre performs the following taskes *loads the class(this is done by the class loader).
+                                       *verifies the bytecode(this is done by the bytecode verifier).
+                                       *interprets the bytecode(this is done by the jvm).
+   Class loader:
+     Class loader loads all the class files required to execute the program. 
+     Class loader makes the program secure by separating the namespace for the classes obtained through the network from the classes available locally. 
+  
+   Byte code verifier:
+      The bytecode verifier verifies the byte code to see if any security problems are there in the code. It checks the byte code and ensures the followings:
+      The code follows JVM specifications.
+      There is no unauthorized access to memory.
+      The code does not cause any stack overflows.
+      There are no illegal data conversions in the code such as float to object references.
+      Once this code is verified and proven that there is no security issues with the code, 
+      JVM will convert the byte code into machine code which will be directly executed by the machine in which the Java program runs.
+   
+   JIT:
+     JUST-IN-TIME is a component which helps the program execution to happen faster.
+
+   Java is secure as the byte code is inspected carefully before execution by JRE.  
+   which is mainly done by the class loader and byte code verifier. 
+   
+   Garbage collection:
+       Garbage collection is a process by which java achieves better memory management.
